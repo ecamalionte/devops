@@ -1,0 +1,24 @@
+- hosts: all
+  sudo: True
+  user: vagrant
+  tasks:
+    - name: "Update packages"
+      shell: sudo apt-get update
+    - name: "Install nginx"
+      shell: sudo apt-get -y install nginx
+    - name: "Install PHP-FPM"
+      shell: sudo apt-get -y install php-fpm
+    - name: "Install Mysql"
+      shell: sudo apt-get -y install mysql-server
+    - name: "Create wordpress directory"
+      shell: sudo mkdir -p /opt/wordpress
+    - name: "Copy blog.nginx"
+      shell: copy blog.nginx /etc/nginx/sites-available/blog
+    - name: "Activate Blog"
+      shell: ln -fs /etc/nginx/sites-available/blog /etc/nginx/sites-enabled/blog
+    - name: "Remove default site"
+      shell: rm -f /etc/nginx/sites-enabled/default
+    - name: "Restart nginx"
+      shell: service nginx restart
+    - name: "Copy PHP test page"
+      shell: copy test.php /opt/wordpress
