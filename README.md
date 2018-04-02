@@ -3,6 +3,7 @@
 Esses exmplos são exercícios de DevOps retirados do livro `Caixa de Ferramentas DevOps` escrito pelo Gleicon
 
 # Comandos
+
 Para virtualizar os exemplos, basta utilizar os comandos de ciclo de vida do Vagrant conforme abaixo:
 
 Para criar máquinas
