@@ -53,6 +53,8 @@ Esse exemplo com Apache Benchmark envia 100 requests, 10 em concorrência, a cad
 Dentro do server, verifica o Load Average
  ```
  $ uptime
+
+ 01:57:00 up 1:39, 1 user, load average: 2.31, 2.47, 2.03
  ```
 
 Dentro do server, verifica as estatísticas de de CPU e memória
