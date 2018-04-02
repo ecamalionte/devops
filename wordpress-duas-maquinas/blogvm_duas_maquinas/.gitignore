@@ -1,0 +1,4 @@
+vars/mysql.yml
+*~
+.vagrant
+tokens
